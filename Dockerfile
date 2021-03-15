@@ -1,12 +1,10 @@
 FROM node:latest
 
-WORKDIR /app/src
+WORKDIR /app
 
-COPY package.json /app/src
+COPY . .
 
 RUN npm i --silent
-
-COPY . /app/src
 
 RUN npm run build 
 

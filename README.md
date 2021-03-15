@@ -45,6 +45,12 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Running with docker
+```
+docker image build -t nest-app-image .
+
+docker container run -p 3000:3000 --name nest-app -v ${pwd}:/app -v nodemodules:/app/node_modules nest-app-image
+```
 ## Test
 
 ```bash
